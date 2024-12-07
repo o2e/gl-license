@@ -88,6 +88,8 @@ curl -L https://gitlab.com/gitlab-org/gitlab/-/raw/master/ee/app/models/gitlab_s
 BUILD_DIR=$(pwd)/build
 mkdir -p "$BUILD_DIR"
 
+chmod -R 777 ./src
+
 echo "[*] scanning features..."
 FEATURE_LIST_FILE=$BUILD_DIR/features.json
 rm -f "${FEATURE_LIST_FILE:?}" || true
